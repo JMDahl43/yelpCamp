@@ -26,7 +26,7 @@ const seedDB = async () => {
     const camp = new Campground({
       location: `${cities[random1000].city}, ${cities[random1000].state}`,
       title: `${sample(descriptors)} ${sample(places)}`,
-      image: `https://source.unsplash.com/random/camping,${i}`,
+      image: `https://source.unsplash.com/random/camping,${i}`, //300x300?
       description:
         'Meatball pancetta short loin sirloin, landjaeger swine picanha cupim pork loin ground round tenderloin bacon ham hock ball tip shoulder. Ribeye shank frankfurter rump ham. Pork loin capicola rump spare ribs doner, shank meatball brisket chislic swine. Chislic pancetta strip steak flank.',
       price,

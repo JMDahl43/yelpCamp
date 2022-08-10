@@ -22,9 +22,14 @@ const seedDB = async () => {
   // Create new data
   for (let i = 0; i < 50; i++) {
     const random1000 = Math.floor(Math.random() * 1000)
+    const price = Math.floor(Math.random() * 20) + 10
     const camp = new Campground({
       location: `${cities[random1000].city}, ${cities[random1000].state}`,
       title: `${sample(descriptors)} ${sample(places)}`,
+      image: `https://source.unsplash.com/random/camping,${i}`,
+      description:
+        'Meatball pancetta short loin sirloin, landjaeger swine picanha cupim pork loin ground round tenderloin bacon ham hock ball tip shoulder. Ribeye shank frankfurter rump ham. Pork loin capicola rump spare ribs doner, shank meatball brisket chislic swine. Chislic pancetta strip steak flank.',
+      price,
     })
     await camp.save()
   }
